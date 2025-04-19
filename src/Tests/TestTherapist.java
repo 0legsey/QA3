@@ -44,4 +44,6 @@ class TestTherapist {
         Assertions.assertEquals(expected_diagnosys, therapist.evaluateSymptoms(symptoms));
     }
 
+
+
 }

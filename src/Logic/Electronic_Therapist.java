@@ -7,6 +7,10 @@ import java.util.List;
 public class Electronic_Therapist {
     public Electronic_Therapist(){}
 
+    /**
+     * Метод, собирающий анамнез пациента
+     * @return список всех симптомов пациента
+     */
     public List<String> anamnesisCollection(){
         //todo добавить полноценную реализацию anamnesisCollection
         List<String> symptoms = new ArrayList<>();
@@ -15,6 +19,11 @@ public class Electronic_Therapist {
         return symptoms;
     }
 
+    /**
+     * Метод, устанавливающий возможный диагноз на основе собранного списка симптомов
+     * @param symptoms список симптомов пациента
+     * @return возможный диагноз пациента
+     */
     public String evaluateSymptoms(List<String> symptoms){
         //todo добавить полноценную реализацию evaluateSymptoms
         if  (symptoms.contains("боль в животе") && symptoms.contains("тошнота")){
