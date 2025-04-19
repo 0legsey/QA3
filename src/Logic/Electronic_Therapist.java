@@ -11,6 +11,7 @@ public class Electronic_Therapist {
         //todo добавить полноценную реализацию anamnesisCollection
         List<String> symptoms = new ArrayList<>();
         symptoms.add("температура");
+        symptoms.add("боль в горле");
         return symptoms;
     }
 }
