@@ -8,6 +8,7 @@ public class Electronic_Therapist {
     public Electronic_Therapist(){}
 
     public List<String> anamnesisCollection(){
+        //todo добавить полноценную реализацию anamnesisCollection
         List<String> symptoms = new ArrayList<>();
         symptoms.add("температура");
         return symptoms;

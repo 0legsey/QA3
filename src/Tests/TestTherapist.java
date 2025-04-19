@@ -15,7 +15,13 @@ class TestTherapist {
     @Test
     void anamnesisCollectionTemperatureTest(){
         Electronic_Therapist therapist = new Electronic_Therapist();
-        Assertions.assertTrue(anamnesisCollection().contains("температура"));
+        Assertions.assertTrue(therapist.anamnesisCollection().contains("температура"));
+    }
+
+    @Test
+    void anamnesisCollectionTempAndSoarThroatTest(){
+        Electronic_Therapist therapist = new Electronic_Therapist();
+        Assertions.assertTrue(therapist.anamnesisCollection().contains("температура") && therapist.anamnesisCollection().contains("боль в горле"));
     }
 
 }
