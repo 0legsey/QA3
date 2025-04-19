@@ -28,6 +28,7 @@ class TestTherapist {
         Assertions.assertTrue(therapist.anamnesisCollection().contains("температура") && therapist.anamnesisCollection().contains("боль в горле"));
     }
 
+    @Test
     void evaluateSymptomsOfTempAndSoreThroat(){
         Electronic_Therapist therapist = new Electronic_Therapist();
         List<String> symptoms = new ArrayList<>(Arrays.asList("температура", "боль в горле"));

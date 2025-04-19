@@ -14,4 +14,8 @@ public class Electronic_Therapist {
         symptoms.add("боль в горле");
         return symptoms;
     }
+
+    public String evaluateSymptoms(List<String> symptoms){
+        return "Возможный диагноз - ангина/ОРВИ. Необходима консультация врача";
+    }
 }
