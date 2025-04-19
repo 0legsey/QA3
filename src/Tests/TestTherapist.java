@@ -36,4 +36,12 @@ class TestTherapist {
         Assertions.assertEquals(expected_diagnosys, therapist.evaluateSymptoms(symptoms));
     }
 
+    @Test
+    void evaluateSymptomsOfStomachAcheAndNausea(){
+        Electronic_Therapist therapist = new Electronic_Therapist();
+        List<String> symptoms = new ArrayList<>(Arrays.asList("боль в животе", "тошнота"));
+        String expected_diagnosys = "Возможный диагноз - гастрит. Необходимо исключить из рациона жирную пищу и обратиться к гастроэнтерологу";
+        Assertions.assertEquals(expected_diagnosys, therapist.evaluateSymptoms(symptoms));
+    }
+
 }

@@ -16,6 +16,7 @@ public class Electronic_Therapist {
     }
 
     public String evaluateSymptoms(List<String> symptoms){
+        //todo добавить полноценную реализацию evaluateSymptoms
         return "Возможный диагноз - ангина/ОРВИ. Необходима консультация врача";
     }
 }
