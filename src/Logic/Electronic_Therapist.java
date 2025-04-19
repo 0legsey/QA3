@@ -17,6 +17,9 @@ public class Electronic_Therapist {
 
     public String evaluateSymptoms(List<String> symptoms){
         //todo добавить полноценную реализацию evaluateSymptoms
+        if  (symptoms.contains("боль в животе") && symptoms.contains("тошнота")){
+            return "Возможный диагноз - гастрит. Необходимо исключить из рациона жирную пищу и обратиться к гастроэнтерологу";
+        }
         return "Возможный диагноз - ангина/ОРВИ. Необходима консультация врача";
     }
 }
