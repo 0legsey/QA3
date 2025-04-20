@@ -3,6 +3,7 @@ package Logic;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Electronic_Therapist {
     private List<String> questionList;
@@ -21,8 +22,14 @@ public class Electronic_Therapist {
     public List<String> anamnesisCollection(){
         //todo добавить полноценную реализацию anamnesisCollection
         List<String> symptoms = new ArrayList<>();
-        symptoms.add("температура");
-        symptoms.add("боль в горле");
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < questionList.size(); i++){
+            System.out.println(questionList.get(i));
+            if (scanner.nextLine().trim().equalsIgnoreCase("да")){
+                symptoms.add(symptomList.get(i));
+            }
+        }
+        scanner.close();
         return symptoms;
     }
 
