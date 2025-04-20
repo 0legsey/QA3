@@ -6,9 +6,12 @@ import java.util.List;
 
 public class Electronic_Therapist {
     private List<String> questionList;
+    private List<String> symptomList;
+
 
     public Electronic_Therapist(){
         questionList = new ArrayList<>();
+        symptomList = new ArrayList<>();
     }
 
     /**
@@ -51,6 +54,22 @@ public class Electronic_Therapist {
      */
     public List<String> getQuestionList(){
         return questionList;
+    }
+
+    /**
+     * Метод, добавляющий симптом в список симптомов
+     * @param symptom строка, содержащая сам симптом
+     */
+    public void addSymptom(String symptom){
+        symptomList.add(symptom);
+    }
+
+    /**
+     * Метод, возвращающий список симптомов
+     * @return список, содержащий симптомы
+     */
+    public List<String> getSymptomList(){
+        return symptomList;
     }
 
 }
