@@ -20,7 +20,6 @@ public class Electronic_Therapist {
      * @return список всех симптомов пациента
      */
     public List<String> anamnesisCollection(){
-        //todo добавить полноценную реализацию anamnesisCollection
         List<String> symptoms = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < questionList.size(); i++){
@@ -39,13 +38,19 @@ public class Electronic_Therapist {
      * @return возможный диагноз пациента
      */
     public String evaluateSymptoms(List<String> symptoms){
-        //todo добавить полноценную реализацию evaluateSymptoms
-        if  (symptoms.contains("боль в животе") && symptoms.contains("тошнота")){
-            return "Возможный диагноз - гастрит. Необходимо исключить из рациона жирную пищу и обратиться к гастроэнтерологу";
+        if (symptoms.contains("температура") && symptoms.contains("боль в горле")) {
+            return "Возможный диагноз - ангина/ОРВИ. Необходима консультация врача.";
+        } else if (symptoms.contains("кашель") && symptoms.contains("температура")) {
+            return "Возможный диагноз - бронхит/пневмония. Необходима консультация врача.";
+        } else if (symptoms.contains("слабость") && !symptoms.contains("температура")) {
+            return "Возможный диагноз - переутомление. Следует отдохнуть и принять витамины.";
+        } else if  (symptoms.contains("боль в животе") && symptoms.contains("тошнота")){
+            return "Возможный диагноз - гастрит. Необходимо исключить из рациона жирную пищу и обратиться к гастроэнтерологу.";
         }
-        return "Возможный диагноз - ангина/ОРВИ. Необходима консультация врача";
+        else {
+            return "Ваши симптомы неясны. Рекомендуется посетить врача для точного диагноза.";
+        }
     }
-
 
     /**
      * Метод, добавляющий вопрос в список вопросов пациенту
