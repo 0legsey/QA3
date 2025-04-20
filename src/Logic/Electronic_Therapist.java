@@ -5,7 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Electronic_Therapist {
-    public Electronic_Therapist(){}
+    private List<String> questionList;
+
+    public Electronic_Therapist(){
+        questionList = new ArrayList<>();
+    }
 
     /**
      * Метод, собирающий анамнез пациента
@@ -31,4 +35,13 @@ public class Electronic_Therapist {
         }
         return "Возможный диагноз - ангина/ОРВИ. Необходима консультация врача";
     }
+
+    public void addQuestion(String question){
+        questionList.add(question);
+    }
+
+    public List<String> getQuestionList(){
+        return questionList;
+    }
+
 }
