@@ -38,5 +38,11 @@ class TestTherapist {
         Assertions.assertEquals(expected_diagnosys, therapist.evaluateSymptoms(symptoms));
     }
 
-    
+    @Test
+    void addQuestionTest(){
+        Electronic_Therapist therapist = new Electronic_Therapist();
+        therapist.addQuestion("Есть ли у вас повышенная температура? (да/нет)");
+        Assertions.assertTrue(therapist.getQuestionList.contains("Есть ли у вас повышенная температура? (да/нет)"));
+    }
+
 }
