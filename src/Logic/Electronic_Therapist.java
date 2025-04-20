@@ -36,10 +36,19 @@ public class Electronic_Therapist {
         return "Возможный диагноз - ангина/ОРВИ. Необходима консультация врача";
     }
 
+
+    /**
+     * Метод, добавляющий вопрос в список вопросов пациенту
+     * @param question строка, содержащая сам вопрос
+     */
     public void addQuestion(String question){
         questionList.add(question);
     }
 
+    /**
+     * Метод, возвращающий список вопросов пациенту
+     * @return список, содержащий вопросы
+     */
     public List<String> getQuestionList(){
         return questionList;
     }
